@@ -76,6 +76,10 @@ cursor: pointer; top:3vw; position: absolute;z-index: 1;background:url(img/wxz.p
  * Create the checked state
  */
 .checkboxFour input[type=checkbox]:checked + label {background:url(img/xz.png) no-repeat;background-size:6vw auto;}
+
+
+
+
 /* RADIO */
 .regular-radio {display: none;}
 .regular-radio + label { width:20px; height:20px; -webkit-appearance: none;background:url(img/icon2_w3c1.png) no-repeat;background-size:20px auto; transition: all .5s ease; box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05);border-radius: 50px;display: inline-block;position: relative;top:6px;}

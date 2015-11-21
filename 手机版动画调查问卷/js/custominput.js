@@ -11,25 +11,25 @@ jQuery.fn.customInput = function(){
 		if($(this).is('[type=checkbox],[type=radio]')){
 			var input = $(this);
 			
-			// 使用输入的ID得到相关的标签
+			// 脢鹿脫脙脢盲脠毛碌脛ID碌脙碌陆脧脿鹿脴碌脛卤锚脟漏
 			var label = $('label[for='+input.attr('id')+']');
 			
-			// 包裹在一个div输入+标签
+			// 掳眉鹿眉脭脷脪禄赂枚div脢盲脠毛+卤锚脟漏
 			input.add(label).wrapAll('<div class="custom-'+ input.attr('type') +'"></div>');
 			
-			// 必要的浏览器不支持：hover伪类的标签
+			// 卤脴脪陋碌脛盲炉脌脌脝梅虏禄脰搂鲁脰拢潞hover脦卤脌脿碌脛卤锚脟漏
 			label.hover(
 				function(){ $(this).addClass('hover'); },
 				function(){ $(this).removeClass('hover'); }
 			);
 			
-			//绑定自定义事件，触发它，绑定点击，焦点，模糊事件				
+			//掳贸露篓脳脭露篓脪氓脢脗录镁拢卢麓楼路垄脣眉拢卢掳贸露篓碌茫禄梅拢卢陆鹿碌茫拢卢脛拢潞媒脢脗录镁				
 			input.bind('updateState', function(){	
 				input.is(':checked') ? label.addClass('checked') : label.removeClass('checked checkedHover checkedFocus'); 
 			})
 			.trigger('updateState')
 			.click(function(){ 
-				$('input[name='+ $(this).attr('name') +']').trigger('updateState'); 
+		s		$('input[name='+ $(this).attr('name') +']').trigger('updateState'); 
 			})
 			.focus(function(){ 
 				label.addClass('focus'); 
